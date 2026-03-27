@@ -12,12 +12,4 @@ public class HomeControlle {
         return "Hello World";
     }
 
-    @RequestMapping("/about")
-    public String about(){
-
-        return "About !!";
-    }
-
-
-
 }

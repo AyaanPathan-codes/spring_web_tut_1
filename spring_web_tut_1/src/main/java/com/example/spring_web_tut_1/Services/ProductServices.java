@@ -1,10 +1,13 @@
 package com.example.spring_web_tut_1.Services;
 
 import com.example.spring_web_tut_1.Model.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
 
+
+@Service
 public class ProductServices {
 
     List<Product> products= Arrays.asList(
@@ -12,7 +15,7 @@ public class ProductServices {
             new Product(102,"Camera",60000)
     );
 
-    public List<Product> getProductList() {
+    public List<Product> getProduct() {
         return products;
     }
 }
