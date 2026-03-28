@@ -23,6 +23,15 @@ public class Product {
         return productName;
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
+                '}';
+    }
+
     public void setProductName(String productName) {
         this.productName = productName;
     }
