@@ -1,8 +1,16 @@
 package com.example.spring_web_tut_1.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
 
+
+@Entity
 public class Product {
+    public Product() {
+    }
 
+    @Id
     private int productId;
 
     public int getProductId() {
