@@ -28,6 +28,8 @@ public class productService {
     }
 
     public Product getProductById(Integer id) {
-        return repo.findById(id).get();
+        return repo.findById(id).orElse(
+                null
+        );
     }
 }
