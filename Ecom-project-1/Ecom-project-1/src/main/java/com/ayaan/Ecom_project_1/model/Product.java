@@ -26,8 +26,8 @@ public class Product {
     private int quantity;
     private String brand;
 
-    @JsonFormat(shape=JsonFormat.Shape.STRING,pattern = "dd-MM  -yyyy")
-    private Date releasedate;
+    @JsonFormat(shape=JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd")
+    private Date releaseDate;
 
 
     private String imageName;
