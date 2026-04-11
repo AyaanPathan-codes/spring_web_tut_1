@@ -33,4 +33,9 @@ public class UserController {
         String delteUser = service.deleteUser(id);
         return ResponseEntity.status(200).body(delteUser);
     }
+
+    @GetMapping("/add")
+    public int addMethod(@RequestParam int a, @RequestParam int b){
+        return a + b;
+    }
 }
