@@ -1,6 +1,7 @@
 package com.ayaan.expenseTrackerBasic.model;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,6 +23,7 @@ public class Expense {
     private String description;
     @Enumerated(EnumType.STRING)
     private Category category;
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate date;
 
 
