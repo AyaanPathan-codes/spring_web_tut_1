@@ -34,7 +34,7 @@ public class ExpenseController {
        return service.addExpense(user);
     }
 
-    @DeleteMapping("/")
+    @DeleteMapping("/{id}")
     public String deleteExpenseById(@PathVariable int id){
        return service.deleteExpense(id);
     }
