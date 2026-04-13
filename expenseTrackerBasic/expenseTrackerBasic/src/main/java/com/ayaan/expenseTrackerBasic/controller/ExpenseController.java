@@ -19,12 +19,13 @@ public class ExpenseController {
     }
 
     @GetMapping("/user/{id}")
-    public Expense getExpenseById(@PathVariable int id){
+    public Expense getExpenseById(@PathVariable Long id){
+
         return service.getExpenseById(id);
     }
 
-    @PutMapping("/")
-    public Expense updateUser(@RequestBody Expense user,int id){
+    @PutMapping("/user/{id}")
+    public Expense updateUser(@RequestBody Expense user,@PathVariable Long id){
         return service.updateExpense(user,id);
     }
 
@@ -34,8 +35,8 @@ public class ExpenseController {
        return service.addExpense(user);
     }
 
-    @DeleteMapping("/{id}")
-    public String deleteExpenseById(@PathVariable int id){
+    @DeleteMapping("/user/{id}")
+    public String deleteExpenseById(@PathVariable Long id){
        return service.deleteExpense(id);
     }
 }

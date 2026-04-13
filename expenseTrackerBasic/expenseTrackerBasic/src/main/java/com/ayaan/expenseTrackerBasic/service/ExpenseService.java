@@ -18,15 +18,15 @@ public class ExpenseService {
         return repo.findAll();
     }
 
-    public Expense getExpenseById( int id) {
+    public Expense getExpenseById( Long id) {
         return repo.findById(id)
-                .orElseThrow(() -> new RuntimeException());
+                .orElseThrow(() -> new RuntimeException("User Not Found"));
     }
 
 
-    public Expense updateExpense(Expense user,int id) {
+    public Expense updateExpense(Expense user,Long id) {
 
-            Expense exisisting =repo.findById(user.getUid().intValue())
+            Expense exisisting =repo.findById(id)
                     .orElseThrow(() -> new RuntimeException("User Not Found"));
 
             exisisting.setAmount(user.getAmount());
@@ -41,7 +41,7 @@ public class ExpenseService {
       return  repo.save(user);
     }
 
-    public String deleteExpense(int id) {
+    public String deleteExpense(Long id) {
         Expense exisisting = repo.findById(id)
                 .orElseThrow(()->new  RuntimeException("User Not Found"));
         repo.delete(exisisting);
