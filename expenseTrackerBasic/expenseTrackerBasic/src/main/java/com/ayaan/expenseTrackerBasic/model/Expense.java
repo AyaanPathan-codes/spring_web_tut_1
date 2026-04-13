@@ -18,7 +18,7 @@ public class Expense {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long uid;
+    private Long uid;
     private Double amount;
     private String description;
     @Enumerated(EnumType.STRING)

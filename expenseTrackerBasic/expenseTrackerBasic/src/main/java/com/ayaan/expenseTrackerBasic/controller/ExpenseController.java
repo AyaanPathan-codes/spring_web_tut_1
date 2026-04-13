@@ -24,8 +24,8 @@ public class ExpenseController {
     }
 
     @PutMapping("/")
-    public Expense updateUser(@RequestBody Expense user){
-        return service.updateExpense(user);
+    public Expense updateUser(@RequestBody Expense user,int id){
+        return service.updateExpense(user,id);
     }
 
 

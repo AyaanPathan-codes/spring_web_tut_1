@@ -24,9 +24,9 @@ public class ExpenseService {
     }
 
 
-    public Expense updateExpense(Expense user) {
+    public Expense updateExpense(Expense user,int id) {
 
-            Expense exisisting =repo.findById((int)user.getUid())
+            Expense exisisting =repo.findById(user.getUid().intValue())
                     .orElseThrow(() -> new RuntimeException("User Not Found"));
 
             exisisting.setAmount(user.getAmount());
