@@ -47,4 +47,8 @@ public class ExpenseService {
         repo.delete(exisisting);
         return "Deleted Successfully";
     }
+
+    public Expense addSaving(Expense user) {
+        return repo.save(user);
+    }
 }

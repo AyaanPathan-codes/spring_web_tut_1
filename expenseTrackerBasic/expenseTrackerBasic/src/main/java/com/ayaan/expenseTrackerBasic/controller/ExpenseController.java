@@ -40,4 +40,9 @@ public class ExpenseController {
     public String deleteExpenseById(@PathVariable Long id){
        return service.deleteExpense(id);
     }
+
+    @PostMapping("/save")
+    public Expense addSavings(@RequestBody Expense user){
+        return service.addSaving(user);
+    }
 }
