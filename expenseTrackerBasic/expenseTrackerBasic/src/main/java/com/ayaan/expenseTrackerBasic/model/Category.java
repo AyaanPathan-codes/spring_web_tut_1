@@ -5,6 +5,7 @@ public enum Category {
     FOOD,
     TRAVEL,
     SHOPPING,
+    SAVINGS,
     BILLS,
     ENTERTAINMENT,
     OTHER
